@@ -1,0 +1,12 @@
+<span style="width:120px;">
+    <button style="width:80px;" ng-click="$ctrl.onYes()">
+        {{ $ctrl.yes }}
+        <i ng-if="$ctrl.showTotal && $ctrl.voteCount[$ctrl.key].yes">({{ $ctrl.voteCount[$ctrl.key].yes }})</i>
+        <i ng-if="$ctrl.showUnique && $ctrl.voteCount[$ctrl.key].yesUsers">({{ $ctrl.voteCount[$ctrl.key].yesUsers.length }})</i>
+    </button>
+    <button style="width:80px;" ng-click="$ctrl.onNo()">
+        {{ $ctrl.no }}
+        <i ng-if="$ctrl.showTotal && $ctrl.voteCount[$ctrl.key].no">({{ $ctrl.voteCount[$ctrl.key].no }})</i>
+        <i ng-if="$ctrl.showUnique && $ctrl.voteCount[$ctrl.key].noUsers">({{ $ctrl.voteCount[$ctrl.key].noUsers.length }})</i>
+    </button>
+</span>
